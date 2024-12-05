@@ -5,6 +5,6 @@ export default class GameCron extends Table.Crons.TableGameCron {
         const { configName } = this.definition;
         const archiveStatus = await this.archiveStatusesRepository.findOne({ name: configName }, "lastArcId").lean().exec();
 
-        return archiveStatus ? (archiveStatus.lastArcId["_phiens"] ?? archiveStatus.lastArcId["_rounds"]) + 1 : 1;
+        return archiveStatus ? (archiveStatus.lastArcId["_rounds"] ?? archiveStatus.lastArcId["_rounds"]) + 1 : 1;
     }
 }

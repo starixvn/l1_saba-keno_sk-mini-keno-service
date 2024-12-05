@@ -1,5 +1,5 @@
 const game = {
-    id: 52,
+    id: 1501,
     name: "megakeno",
 };
 
@@ -12,7 +12,7 @@ const socketOptions = {
 };
 
 const gameConfig = {
-    gameId: 52,
+    gameId: 1501,
     name: "megakeno",
     enabled: true,
     minBet: 1,
