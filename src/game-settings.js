@@ -59,7 +59,7 @@ export default [
         repositories: {
             roundsRepository: getRoundRepository("MegaKeno_rounds"),
             betsRepository: getBetRepository("MegaKeno_bets"),
-            betLogsRepository: getBetLogsRepository("MegaKeno_bets"),
+            betLogsRepository: getBetLogsRepository("MegaKeno_betlogs"),
             resultsRepository: getResultRepository("MegaKeno_result"),
             tempBetsRepository: getTempBetRepository("MegaKeno_tmpbets"),
             allGamesBetsRepository,
@@ -81,7 +81,7 @@ export default [
             allGamesBetsRepository,
             roundsRepository: getRoundRepository("MegaKeno2_rounds"),
             betsRepository: getBetRepository("MegaKeno2_bets"),
-            betLogsRepository: getBetLogsRepository("MegaKeno2_bets"),
+            betLogsRepository: getBetLogsRepository("MegaKeno2_betlogs"),
             resultsRepository: getResultRepository("MegaKeno2_result"),
             tempBetsRepository: getTempBetRepository("MegaKeno2_tmpbets"),
         },
