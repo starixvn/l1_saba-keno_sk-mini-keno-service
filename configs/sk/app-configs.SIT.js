@@ -32,7 +32,7 @@ export default {
     },
     enabledLogs: true,
     database: {
-         url: "mongodb://lmn_backend:LmnBackend%40517@10.99.99.53:39430,10.99.99.54:39430,10.99.99.188:39430,10.99.99.187:39430/?replicaSet=SN-SIT&appName=minikeno",
+        url: "mongodb://lmn_backend:LmnBackend%40517@10.99.99.53:39430,10.99.99.54:39430,10.99.99.188:39430,10.99.99.187:39430/?replicaSet=SN-SIT&appName=minikeno",
         options: {
             dbName: "minigame",
             useNewUrlParser: true,
