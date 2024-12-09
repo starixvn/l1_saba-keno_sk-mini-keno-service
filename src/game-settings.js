@@ -47,7 +47,7 @@ export default [
     {
         ...generateGameSetting(
             1501,
-            "SkMegaKeno",
+            "MegaKeno",
             {
                 wholeRound: 58,
                 placingBets: 45,
@@ -68,7 +68,7 @@ export default [
     {
         ...generateGameSetting(
             1502,
-            "SkMegaKeno2",
+            "MegaKeno2",
             {
                 wholeRound: 43,
                 placingBets: 30,
@@ -89,7 +89,7 @@ export default [
     {
         ...generateGameSetting(
             1503,
-            "SkKenoMini",
+            "KenoMini",
             {
                 wholeRound: 51,
                 placingBets: 40,
@@ -110,7 +110,7 @@ export default [
     {
         ...generateGameSetting(
             1504,
-            "SkKenoMini2",
+            "KenoMini2",
             {
                 wholeRound: 41,
                 placingBets: 30,
@@ -129,7 +129,7 @@ export default [
         },
     },
     {
-        ...generateGameSetting(1505, "SkKenoEast", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
+        ...generateGameSetting(1505, "KenoEast", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
         repositories: {
             roundsRepository: getRoundRepository("KenoEast_rounds"),
             betsRepository: getBetRepository("KenoEast_bets"),
@@ -140,7 +140,7 @@ export default [
         },
     },
     {
-        ...generateGameSetting(1506, "SkKenoWest", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
+        ...generateGameSetting(1506, "KenoWest", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
         repositories: {
             allGamesBetsRepository,
             roundsRepository: getRoundRepository("KenoWest_rounds"),
@@ -151,7 +151,7 @@ export default [
         },
     },
     {
-        ...generateGameSetting(1507, "SkKenoNorth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
+        ...generateGameSetting(1507, "KenoNorth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
         repositories: {
             roundsRepository: getRoundRepository("KenoNorth_rounds"),
             betsRepository: getBetRepository("KenoNorth_bets"),
@@ -162,7 +162,7 @@ export default [
         },
     },
     {
-        ...generateGameSetting(1508, "SkKenoSouth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
+        ...generateGameSetting(1508, "KenoSouth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
         repositories: {
             roundsRepository: getRoundRepository("KenoSouth_rounds"),
             betsRepository: getBetRepository("KenoSouth_bets"),
