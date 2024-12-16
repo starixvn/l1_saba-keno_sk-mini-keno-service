@@ -4,7 +4,7 @@ import {
     bets as getBetRepository,
     tempBets as getTempBetRepository,
     result as getResultRepository,
-    allGamesHistoriesModel
+    allGamesHistoriesModel,
 } from "./models";
 import SettlementRules from "./settlementRules";
 import generateResult from "./shuffleNumbers";
@@ -151,24 +151,24 @@ export default [
         },
     },
     {
-        ...generateGameSetting(1507, "KenoNorth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
-        repositories: {
-            roundsRepository: getRoundRepository("KenoNorth_rounds"),
-            betsRepository: getBetRepository("KenoNorth_bets"),
-            betLogsRepository: getBetLogsRepository("KenoNorth_betlogs"),
-            resultsRepository: getResultRepository("KenoNorth_result"),
-            tempBetsRepository: getTempBetRepository("KenoNorth_tmpbets"),
-            allGamesBetsRepository,
-        },
-    },
-    {
-        ...generateGameSetting(1508, "KenoSouth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
+        ...generateGameSetting(1507, "KenoSouth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
         repositories: {
             roundsRepository: getRoundRepository("KenoSouth_rounds"),
             betsRepository: getBetRepository("KenoSouth_bets"),
             betLogsRepository: getBetLogsRepository("KenoSouth_betlogs"),
             resultsRepository: getResultRepository("KenoSouth_result"),
             tempBetsRepository: getTempBetRepository("KenoSouth_tmpbets"),
+            allGamesBetsRepository,
+        },
+    },
+    {
+        ...generateGameSetting(1508, "KenoNorth", kenoDirectionDurations, SettlementRules.full, fullGenerateResult),
+        repositories: {
+            roundsRepository: getRoundRepository("KenoNorth_rounds"),
+            betsRepository: getBetRepository("KenoNorth_bets"),
+            betLogsRepository: getBetLogsRepository("KenoNorth_betlogs"),
+            resultsRepository: getResultRepository("KenoNorth_result"),
+            tempBetsRepository: getTempBetRepository("KenoNorth_tmpbets"),
             allGamesBetsRepository,
         },
     },
