@@ -50,7 +50,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "megakeno_ones",
+                    from: "megakeno_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -127,7 +127,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "megakeno2_ones",
+                    from: "megakeno2_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -204,7 +204,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "kenomini_ones",
+                    from: "kenomini_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -229,7 +229,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenomini_cuocs",
+                                from: "kenomini_betlogs",
                                 let: {
                                     roundId: "$roundId",
                                     playerId: "$playerId",
@@ -259,7 +259,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenomini_phiens",
+                                from: "kenomini_rounds",
                                 localField: "roundId",
                                 foreignField: "id",
                                 as: "round",
@@ -281,7 +281,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "kenomini2_ones",
+                    from: "kenomini2_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -306,7 +306,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenomini2_cuocs",
+                                from: "kenomini2_betlogs",
                                 let: {
                                     roundId: "$roundId",
                                     playerId: "$playerId",
@@ -336,7 +336,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenomini2_phiens",
+                                from: "kenomini2_rounds",
                                 localField: "roundId",
                                 foreignField: "id",
                                 as: "round",
@@ -358,7 +358,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "kenoeast_ones",
+                    from: "kenoeast_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -383,7 +383,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenoeast_cuocs",
+                                from: "kenoeast_betlogs",
                                 let: {
                                     roundId: "$roundId",
                                     playerId: "$playerId",
@@ -413,7 +413,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenoeast_phiens",
+                                from: "kenoeast_rounds",
                                 localField: "roundId",
                                 foreignField: "id",
                                 as: "round",
@@ -435,7 +435,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "kenowest_ones",
+                    from: "kenowest_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -460,7 +460,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenowest_cuocs",
+                                from: "kenowest_betlogs",
                                 let: {
                                     roundId: "$roundId",
                                     playerId: "$playerId",
@@ -490,7 +490,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenowest_phiens",
+                                from: "kenowest_rounds",
                                 localField: "roundId",
                                 foreignField: "id",
                                 as: "round",
@@ -512,7 +512,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "kenosouth_ones",
+                    from: "kenosouth_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -537,7 +537,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenosouth_cuocs",
+                                from: "kenosouth_betlogs",
                                 let: {
                                     roundId: "$roundId",
                                     playerId: "$playerId",
@@ -567,7 +567,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenosouth_phiens",
+                                from: "kenosouth_rounds",
                                 localField: "roundId",
                                 foreignField: "id",
                                 as: "round",
@@ -589,7 +589,7 @@ const createViews = async () => {
             },
             {
                 $lookup: {
-                    from: "kenonorth_ones",
+                    from: "kenonorth_bets",
                     let: {
                         playerId: "$playerId",
                         operatorId: "$operatorId",
@@ -614,7 +614,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenonorth_cuocs",
+                                from: "kenonorth_betlogs",
                                 let: {
                                     roundId: "$roundId",
                                     playerId: "$playerId",
@@ -644,7 +644,7 @@ const createViews = async () => {
                         },
                         {
                             $lookup: {
-                                from: "kenonorth_phiens",
+                                from: "kenonorth_rounds",
                                 localField: "roundId",
                                 foreignField: "id",
                                 as: "round",
@@ -721,8 +721,8 @@ const createRounds = async () => {
     try {
         await miniKenoRounds("megakeno_rounds").insertMany(rounds);
         await miniKenoRounds("megakeno2_rounds").insertMany(rounds);
-        await miniKenoRounds("kenoeast_phien").insertMany(rounds);
-        await miniKenoRounds("kenowest_phien").insertMany(rounds);
+        await miniKenoRounds("kenoeast_rounds").insertMany(rounds);
+        await miniKenoRounds("kenowest_rounds").insertMany(rounds);
     } catch (error) {
         console.log(error);
     }
@@ -731,10 +731,10 @@ const createRounds = async () => {
 const createUserBetData = async () => {
     const userId = await getUserId(normalUser.playerId);
     const betData = userBetData(userId);
-    await bets("megakeno_ones").insertMany(betData);
-    await bets("megakeno2_ones").insertMany(betData);
-    await bets("kenoeast_ones").insertMany(betData);
-    await bets("kenowest_ones").insertMany(betData);
+    await bets("megakeno_bets").insertMany(betData);
+    await bets("megakeno2_bets").insertMany(betData);
+    await bets("kenoeast_bets").insertMany(betData);
+    await bets("kenowest_bets").insertMany(betData);
 };
 
 createTestData();

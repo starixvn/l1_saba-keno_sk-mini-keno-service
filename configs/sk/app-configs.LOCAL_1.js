@@ -2,8 +2,8 @@ export default {
     hostingPort: 5000,
     apiSettings: {
         enabledApi: true,
-        apiUrl: "http://l2_game_api_local_2:5000",
-        authUrl: "http://l2_auth_api_local_2:5000",
+        apiUrl: "http://gn-game-api-local1-service:5000",
+        authUrl: "http://gn-auth-api-local1-service:5000",
         client: {
             id: "game-server",
             secret: "gameserver@20luminet&",
@@ -14,7 +14,7 @@ export default {
         enableApiLogs: true,
     },
     authenticateSettings: {
-        url: "http://l2_auth_api_local_2:5000",
+        url: "http://gn-auth-api-local1-service:5000",
         id: "game-services",
         secret: "gameservices@20luminet&",
         requestTimeout: 10000,
@@ -22,7 +22,7 @@ export default {
         audiences: ["api", "admin-api"],
     },
     userServiceSettings: {
-        url: "http://l2_user_service_local_2:5000",
+        url: "http://gn-user-service-local1-service:5000",
     },
     socketOptions: {
         pingInterval: 60 * 1000,
@@ -32,7 +32,7 @@ export default {
     },
     enabledLogs: true,
     database: {
-        url: "mongodb://lmn_backend:LmnBackend@10.10.50.12:39202,10.10.50.13:39202,10.10.50.14:39202/?replicaSet=L2ppLocal&appName=minikeno",
+        url: "mongodb://lmn_backend:LmnBackend@10.10.50.12:39301,10.10.50.13:39301,10.10.50.14:39301/?replicaSet=GNLocal1&appName=minikeno",
         options: {
             dbName: "minigame",
             useNewUrlParser: true,
@@ -41,13 +41,14 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "https://acb36eb835d948d68c1aad9873754d51@sentry.lumigame.com/27",
+        sentryUrl: "https://0ab2ad396c5a4afbb4c6b65cf39cc4db@sentry.lumigame.com/102",
         logIdentifier: "minikeno",
-        env: "LOCAL_2",
+        env: "LOCAL_1",
     },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
     metrics: {
         enable: true,
         secretKey: "6c1f0f28-70f2-46ae-b031-22624a6cd8df",
     },
+    enableMsgpackParser: false,
 };

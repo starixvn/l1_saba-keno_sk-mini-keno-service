@@ -2,8 +2,8 @@ export default {
     hostingPort: 5000,
     apiSettings: {
         enabledApi: true,
-        apiUrl: "http://l1_game_api_local_3:5000",
-        authUrl: "http://l1_auth_api_local_3:5000",
+        apiUrl: "http://gn_game_api_uat:5000",
+        authUrl: "http://gn_auth_api_uat:5000",
         client: {
             id: "game-server",
             secret: "gameserver@20luminet&",
@@ -11,10 +11,10 @@ export default {
         useAuthenticate: true,
         requestTimeout: 10000,
         placeBetTimeout: 4000,
-        enabledApiLogs: true,
+        enableApiLogs: true,
     },
     authenticateSettings: {
-        url: "http://l1_auth_api_local_3:5000",
+        url: "http://gn_auth_api_uat:5000",
         id: "game-services",
         secret: "gameservices@20luminet&",
         requestTimeout: 10000,
@@ -22,18 +22,17 @@ export default {
         audiences: ["api", "admin-api"],
     },
     userServiceSettings: {
-        url: "http://l1_user_service_local_3:5000",
+        url: "http://gn_user_service_uat:5000",
     },
     socketOptions: {
         pingInterval: 60 * 1000,
         pingTimeout: 60 * 1000,
         transports: ["websocket"],
         allowUpgrades: false,
-        perMessageDeflate: false,
     },
     enabledLogs: true,
     database: {
-        url: "mongodb://lmn_backend:LmnBackend@10.10.50.12:39103,10.10.50.13:39103,10.10.50.14:39103/?replicaSet=L1pppLocal&appName=minikeno",
+        url: "mongodb://lmn_backend:LmnBackend%4022027@10.99.99.53:39420,10.99.99.54:39420,10.99.99.188:39420,10.99.99.187:39420/?replicaSet=SN-UAT&appName=minikeno",
         options: {
             dbName: "minigame",
             useNewUrlParser: true,
@@ -42,14 +41,14 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "https://13f39b8359404ed5aec23655e64ccf78@sentry.lumigame.com/2",
+        sentryUrl: "https://874d2d9593d84ceca0f566c2d4723478@10.2.190.51:9009/304",
         logIdentifier: "minikeno",
-        env: "LOCAL-3",
+        env: "UAT",
     },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
     metrics: {
         enable: true,
         secretKey: "6c1f0f28-70f2-46ae-b031-22624a6cd8df",
     },
-    enableMsgpackParser: false,
+    enableMsgpackParser: true,
 };
