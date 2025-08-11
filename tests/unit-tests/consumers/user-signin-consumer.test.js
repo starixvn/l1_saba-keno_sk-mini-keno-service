@@ -132,7 +132,7 @@ describe("UserSignInConsumer", () => {
                 expect(BaseUserSignInConsumer.prototype.consume).toHaveBeenCalledWith(socketClient, payload);
             });
 
-            it("should publish UM notice when game is disable", async () => {
+            it("should call super consume when game is disable", async () => {
                 // arrange
                 const gameData = {
                     gameConfigs: { enabled: false },
@@ -146,10 +146,10 @@ describe("UserSignInConsumer", () => {
                 await consumer.consume(socketClient, payload);
 
                 // assert
-                expect(userSignInPublisher.publishUmNotice).toHaveBeenCalledWith(socketClient, gameData.umMessages);
+                expect(BaseUserSignInConsumer.prototype.consume).toHaveBeenCalledWith(socketClient, payload);
             });
 
-            it("should publish UM notice when gameConfigs undefine", async () => {
+            it("should call super consume when gameConfigs undefine", async () => {
                 // arrange
                 const gameData = {
                     delayStartTime: 0,
@@ -162,10 +162,10 @@ describe("UserSignInConsumer", () => {
                 await consumer.consume(socketClient, payload);
 
                 // assert
-                expect(userSignInPublisher.publishUmNotice).toHaveBeenCalledWith(socketClient, gameData.umMessages);
+                expect(BaseUserSignInConsumer.prototype.consume).toHaveBeenCalledWith(socketClient, payload);
             });
 
-            it("should publish UM notice when enabled undefine", async () => {
+            it("should call super consume when enabled undefine", async () => {
                 // arrange
                 const gameData = {
                     gameConfigs: { enabled: false },
@@ -179,10 +179,10 @@ describe("UserSignInConsumer", () => {
                 await consumer.consume(socketClient, payload);
 
                 // assert
-                expect(userSignInPublisher.publishUmNotice).toHaveBeenCalledWith(socketClient, gameData.umMessages);
+                expect(BaseUserSignInConsumer.prototype.consume).toHaveBeenCalledWith(socketClient, payload);
             });
 
-            it("should publish UM notice when delayStartTime greater than 0", async () => {
+            it("should call super consume when delayStartTime greater than 0", async () => {
                 // arrange
                 const gameData = {
                     gameConfigs: { enabled: true },
@@ -196,7 +196,7 @@ describe("UserSignInConsumer", () => {
                 await consumer.consume(socketClient, payload);
 
                 // assert
-                expect(userSignInPublisher.publishUmNotice).toHaveBeenCalledWith(socketClient, gameData.umMessages);
+                expect(BaseUserSignInConsumer.prototype.consume).toHaveBeenCalledWith(socketClient, payload);
             });
         });
     });

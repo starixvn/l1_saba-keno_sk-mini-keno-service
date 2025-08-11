@@ -11,14 +11,14 @@ describe("game-settings", () => {
         it("should call generateResult with correct param", async () => {
             // arrange
             const expectedValue = [
-                "KenoEast_1_20_80",
-                "KenoMini_1_10_40",
-                "KenoMini2_1_10_40",
-                "KenoNorth_1_20_80",
-                "KenoSouth_1_20_80",
-                "KenoWest_1_20_80",
                 "MegaKeno_1_20_80",
                 "MegaKeno2_1_20_80",
+                "KenoMini_1_10_40",
+                "KenoMini2_1_10_40",
+                "KenoEast_1_20_80",
+                "KenoWest_1_20_80",
+                "KenoSouth_1_20_80",
+                "KenoNorth_1_20_80",
             ];
 
             // act
